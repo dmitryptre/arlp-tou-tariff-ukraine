@@ -1,0 +1,27 @@
+scenario_id,experiment,mechanism,parameters,draw_level,n_replicates,seed,class_modes,neutrality,role
+A1-U20,A,EULP weight multipliers renormalised per ARLP then annual-energy tilt,"{""g"": ""U(0.8, 1.2)"", ""energy"": ""tilt_annual""}",per_EULP,2000,41101,fixed;reclustered,T;A,mandatory;headline
+A2-MIX25,A,25 % of each ARLP's weight spread uniformly over its support then annual-energy tilt,"{""epsilon"": 0.25, ""pool"": ""support"", ""energy"": ""tilt_annual""}",none,1,,fixed;reclustered,T;A,mandatory
+B1-RND20,B,ARLP household counts (identical for alpha to per-household energy),"{""a"": ""U(0.8, 1.2)"", ""readings"": ""count;energy""}",per_ARLP,2000,41201,fixed;reclustered,T;A,mandatory;headline
+B2-STAT,B,per-household annual energy set to the statistical target of _T2,"{""b_s"": ""AnnGWh_s / (H_s e_s)"", ""source"": ""notebook cell cb1d4eb1""}",none,1,,fixed;reclustered,T;A,mandatory
+B3-CLS-A-0.8,B,class A households x 0.8,"{""class"": ""A"", ""f"": 0.8}",none,1,,fixed;reclustered,T;A,mandatory;mechanism
+B3-CLS-A-1.2,B,class A households x 1.2,"{""class"": ""A"", ""f"": 1.2}",none,1,,fixed;reclustered,T;A,mandatory;mechanism
+B3-CLS-B-0.8,B,class B households x 0.8,"{""class"": ""B"", ""f"": 0.8}",none,1,,fixed;reclustered,T;A,mandatory;mechanism
+B3-CLS-B-1.2,B,class B households x 1.2,"{""class"": ""B"", ""f"": 1.2}",none,1,,fixed;reclustered,T;A,mandatory;mechanism
+B3-CLS-C-0.8,B,class C households x 0.8,"{""class"": ""C"", ""f"": 0.8}",none,1,,fixed;reclustered,T;A,mandatory;mechanism
+B3-CLS-C-1.2,B,class C households x 1.2,"{""class"": ""C"", ""f"": 1.2}",none,1,,fixed;reclustered,T;A,mandatory;mechanism
+B3-CLS-ESH-1-0.8,B,class ESH-1 households x 0.8,"{""class"": ""ESH-1"", ""f"": 0.8}",none,1,,fixed;reclustered,T;A,mandatory;mechanism
+B3-CLS-ESH-1-1.2,B,class ESH-1 households x 1.2,"{""class"": ""ESH-1"", ""f"": 1.2}",none,1,,fixed;reclustered,T;A,mandatory;mechanism
+B3-CLS-ESH-2-0.8,B,class ESH-2 households x 0.8,"{""class"": ""ESH-2"", ""f"": 0.8}",none,1,,fixed;reclustered,T;A,mandatory;mechanism
+B3-CLS-ESH-2-1.2,B,class ESH-2 households x 1.2,"{""class"": ""ESH-2"", ""f"": 1.2}",none,1,,fixed;reclustered,T;A,mandatory;mechanism
+C1-TIME-M1,C,timing shift -1 h (advance) in every clustering unit,"{""theta_h"": -1.0, ""units"": ""all""}",none,1,,fixed;reclustered,T;A,mandatory
+C1-TIME-P1,C,timing shift +1 h (delay) in every clustering unit,"{""theta_h"": 1.0, ""units"": ""all""}",none,1,,fixed;reclustered,T;A,mandatory
+C2-ZONE-CM-P5,C,5 % of peak-zone energy moved to off-peak in every unit (common mode),"{""delta"": 0.05, ""units"": ""all""}",none,1,,fixed;reclustered,T;A,mandatory
+C2-ZONE-CM-M5,C,5 % of off-peak energy moved to peak in every unit (common mode),"{""delta"": -0.05, ""units"": ""all""}",none,1,,fixed;reclustered,T;A,mandatory
+C2-ZONE-DM-A,C,5 % of peak-zone energy moved to off-peak in the units of class A only,"{""delta"": 0.05, ""units"": ""class A""}",none,1,,fixed;reclustered,T;A,mandatory
+C2-ZONE-DM-B,C,5 % of peak-zone energy moved to off-peak in the units of class B only,"{""delta"": 0.05, ""units"": ""class B""}",none,1,,fixed;reclustered,T;A,mandatory
+C2-ZONE-DM-C,C,5 % of peak-zone energy moved to off-peak in the units of class C only,"{""delta"": 0.05, ""units"": ""class C""}",none,1,,fixed;reclustered,T;A,mandatory
+C2-ZONE-DM-ESH-1,C,5 % of peak-zone energy moved to off-peak in the units of class ESH-1 only,"{""delta"": 0.05, ""units"": ""class ESH-1""}",none,1,,fixed;reclustered,T;A,mandatory
+C2-ZONE-DM-ESH-2,C,5 % of peak-zone energy moved to off-peak in the units of class ESH-2 only,"{""delta"": 0.05, ""units"": ""class ESH-2""}",none,1,,fixed;reclustered,T;A,mandatory
+C3-RND,C,timing shift and peak/off-peak transfer per clustering unit,"{""theta_h"": ""U(-1, 1) per unit, both seasons"", ""delta_winter"": ""U(-0.05, 0.05) per unit"", ""delta_summer"": ""U(-0.05, 0.05) per unit"", ""draw"": ""uniform(-1, 1, size=(11, 3)); columns theta, delta_w/0.05, delta_s/0.05"", ""order"": ""theta then delta""}",per_unit,2000,41301,fixed;reclustered,T;A,mandatory;headline
+D2-NC,D,no city-rural consolidation: the 16 non-ESH ARLPs clustered directly (k = 3),"{""items"": ""16 non-ESH ARLPs"", ""k_non_esh"": 3, ""k_esh"": 2}",none,1,,reclustered,none,mandatory
+D2-MN,D,daily-mean normalisation of the representative days instead of peak normalisation,"{""normalisation"": ""daily mean"", ""k_non_esh"": 3, ""k_esh"": 2}",none,1,,reclustered,none,mandatory

@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the article and this repository."
+title: "Class-specific residential time-of-use tariffs for Ukraine: code"
+license: MIT
+repository-code: "https://github.com/dmitryptre/arlp-tou-tariff-ukraine"
+authors:
+  - family-names: Monakov
+    given-names: Dmytro
+    affiliation: "Taras Shevchenko National University of Kyiv"
+    orcid: "https://orcid.org/0009-0007-9472-960X"
+references:
+  - type: data
+    title: "ResStock-based synthetic residential load dataset for Ukraine"
+    authors:
+      - family-names: Monakov
+        given-names: Dmytro
+    doi: "10.5281/zenodo.20386981"
+    year: 2026
+  - type: data
+    title: "Designing a class-specific residential time-of-use tariff for demand flexibility in Ukraine"
+    authors:
+      - family-names: Monakov
+        given-names: Dmytro
+    doi: "10.5281/zenodo.23988472"
+    year: 2026

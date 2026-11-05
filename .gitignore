@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# data not in the repository (README.md, "Data")
+inputs/EULP_4435_hourly_load.csv
+inputs/DAM_2019-2025_v05_Full.xlsx
+inputs/BASE_M_2024_Ukraine.xlsx
+inputs/BASE_M_2025_Ukraine.xlsx
+
+# results of a run
+outputs/
